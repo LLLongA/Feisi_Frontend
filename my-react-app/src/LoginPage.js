@@ -1,13 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate('/home');
+  };
+
   return (
     <div className="login-container">
       <div className="login-form">
         <h2>登录</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input type="email" placeholder="邮箱" required />
           <input type="password" placeholder="密码" required />
           <button type="submit">登录</button>

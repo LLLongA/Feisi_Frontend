@@ -32,18 +32,23 @@ const TextToSpeechPage = () => {
               <input type="text" placeholder="按名称搜索" />
             </div>
             <div className="filters">
+              <label>性别</label>
               <select>
                 <option>全部性别</option>
               </select>
+              <label>年龄</label>
               <select>
                 <option>全部年龄</option>
               </select>
-              <select>
+              <label>风格</label>
+              <select>z
                 <option>全部风格</option>
               </select>
+              <label>语种</label>
               <select>
                 <option>全部语种</option>
               </select>
+              <label>场景</label>
               <select>
                 <option>全部场景</option>
               </select>
@@ -62,30 +67,40 @@ const TextToSpeechPage = () => {
         </div>
         <div className="controls">
           <div className="dropdowns">
-            <select>
-              <option>语言</option>
-            </select>
-            <select>
-              <option>风格</option>
-            </select>
+            <div className="dropdown-item">
+              <label htmlFor="language-select">语种</label>
+              <select id="language-select">
+
+              </select>
+            </div>
+
+            <div className="dropdown-item">
+              <label htmlFor="style-select">风格</label>
+              <select id="style-select">
+              </select>
+            </div>
           </div>
+
           <div className="sliders">
-            <label>音调</label>
-            <input type="range" min="0.1" max="2" step="0.1" />
-            <label>语速</label>
-            <input type="range" min="0.5" max="2" step="0.1" />
-            <label>音量</label>
-            <input type="range" min="0" max="100" />
+            <div>
+              <label>音调</label>
+              <input type="range" min="0.1" max="2" step="0.1" />
+            </div>
+            <div>
+              <label>语速</label>
+              <input type="range" min="0.5" max="2" step="0.1" />
+            </div>
+            <div className="volume">
+              <label>音量</label>
+              <input type="range" min="0" max="100" />
+            </div>
           </div>
           <div className="buttons">
-            <button>
-              <img src={mp3Icon} alt="MP3 Icon" className="mp3-icon" />
-            </button>
-            <button>立即合成</button>
-            <button>历史记录</button>
-            <button>
-              <img src={mp3Icon} alt="MP3 Icon" className="mp3-icon" />
-            </button>
+            <div className="large-mp3-icon">
+              <img src={mp3Icon} alt="MP3 Icon" />
+            </div>
+            <button className="small-button">立即合成</button>
+            <button className="small-button">历史记录</button>
           </div>
         </div>
       </div>

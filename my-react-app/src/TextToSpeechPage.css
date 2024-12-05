@@ -1,6 +1,8 @@
+/* Global Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 .home-container {
@@ -30,60 +32,104 @@ body {
   gap: 1rem;
 }
 
+/* Main Content Section */
 .main-content {
   padding: 2rem;
-}
-
-.text-to-speech {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
+/* Add a box to wrap the sections */
+.text-to-speech,
+.controls {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Input Area */
 .input-area {
   flex: 2;
   border: 1px solid #ddd;
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #999;
+  background-color: #fff;
+  border-radius: 8px;
+  /* Added rounded corners */
 }
 
+.input-area p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Voice Options */
 .voice-options {
   flex: 1;
-}
-
-.search {
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .search input {
   width: 100%;
   padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .filters {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+}
+
+.filters label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
 }
 
 .filters select {
   padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+
 }
 
+/* Voice List */
 .voice-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .voice-item {
-  flex: 1 1 calc(50% - 0.5rem);
   background: #f5f5f5;
   padding: 1rem;
   text-align: center;
   border: 1px solid #ddd;
   cursor: pointer;
   position: relative;
+  border-radius: 5px;
 }
 
 .voice-item::before {
@@ -95,39 +141,113 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
+  border-radius: 50%;
 }
 
+/* Controls Section */
 .controls {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 2rem;
   margin-top: 2rem;
+  /* 为 controls 区域添加内边距 */
+
 }
 
+/* Flexbox 布局使得下拉框按列排列 */
 .dropdowns {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+  /* 增加下拉框之间的间距 */
+  margin: 1rem;
 }
 
-.sliders {
+.dropdown-item {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  /* 标签和下拉框垂直排列 */
+  gap: 0.5rem;
+  /* 标签与下拉框之间的间距 */
 }
 
+.dropdown-item label {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  /* 让标签与下拉框之间有适当的间距 */
+}
+
+.dropdown-item select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* 添加轻微的阴影 */
+  transition: border-color 0.3s ease;
+  /* 增加过渡效果 */
+}
+
+.dropdown-item select:hover {
+  border-color: #0072ff;
+}
+
+.dropdown-item select:focus {
+  border-color: #0072ff;
+  outline: none;
+}
+
+
+.sliders,
+.buttons {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  /* 可选，增加内部间距 */
+  background-color: #fff;
+  /* 可选，确保背景颜色与父容器区分 */
+}
+
+
 .sliders label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  color: #333;
+  display: block;
+  text-align: center;
 }
 
 .sliders input {
   width: 100%;
+  margin-top: 0.5rem;
+}
+
+.sliders .volume {
+  flex: 1;
 }
 
 .buttons {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
+  align-items: center;
+  flex: 0.5;
+  padding-left: 1rem;
+}
+
+.large-mp3-icon {
+  width: 60px;
+  height: 60px;
+  background: #0072ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .buttons button {
@@ -141,13 +261,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s;
 }
 
 .buttons button:hover {
   background: #005bb5;
 }
 
-.mp3-icon {
-  width: 20px;
-  height: 20px;
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+
+  .text-to-speech,
+  .controls {
+    flex-direction: column;
+  }
+
+  .voice-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .buttons button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
 }

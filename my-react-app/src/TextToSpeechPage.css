@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url('./public/background-image.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 0 1rem;
+  height: 60px;
+}
+
+.left-icon img,
+.right-icons img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.right-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.text-to-speech {
+  display: flex;
+  gap: 2rem;
+}
+
+.input-area {
+  flex: 2;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  color: #999;
+}
+
+.voice-options {
+  flex: 1;
+}
+
+.search {
+  margin-bottom: 1rem;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filters select {
+  padding: 0.5rem;
+}
+
+.voice-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.voice-item {
+  flex: 1 1 calc(50% - 0.5rem);
+  background: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  position: relative;
+}
+
+.voice-item::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: gray;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dropdowns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sliders label {
+  margin-bottom: 0.5rem;
+}
+
+.sliders input {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons button {
+  padding: 1rem;
+  background: #0072ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button:hover {
+  background: #005bb5;
+}
+
+.mp3-icon {
+  width: 20px;
+  height: 20px;
+}

@@ -41,22 +41,32 @@ body {
 }
 
 /* Add a box to wrap the sections */
-.text-to-speech,
-.controls {
+.text-to-speech {
   display: flex;
   gap: 1.5rem;
   justify-content: space-between;
-  background-color: #fff;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.controls-buttons-container {
+  display: flex;
+  align-items: flex-start; /* 垂直对齐方式 */
+  gap: 2rem; /* 控制间距 */
+}
 
+.controls {
+  flex: 2; /* 控制宽度比例 */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex; /* 使用 Flexbox 布局 */
+  gap: 2rem; /* 控制间距 */
+}
 
 /* Input Area */
 .input-area {
-  flex: 2;
+  flex: 2; /* 控制宽度比例 */
   border: 1px solid #ddd;
   padding: 1rem;
   display: flex;
@@ -65,7 +75,6 @@ body {
   color: #999;
   background-color: #fff;
   border-radius: 8px;
-  /* Added rounded corners */
 }
 
 .input-area p {
@@ -75,7 +84,7 @@ body {
 
 /* Voice Options */
 .voice-options {
-  flex: 1;
+  flex: 1; /* 控制宽度比例 */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -93,33 +102,25 @@ body {
 }
 
 .filters {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
-}
-
-.filters label {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #333;
-  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 三列 */
+  gap: 1rem; /* 间距 */
 }
 
 .filters select {
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 5px;
+  width: 100%; /* 使select元素宽度适应容器 */
+  border-radius: 8px;
   border: 1px solid #ccc;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-
 }
 
 /* Voice List */
 .voice-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  grid-template-rows: repeat(4, auto); /* 四行 */
+  gap: 1rem; /* 间距 */
 }
 
 .voice-item {
@@ -129,54 +130,70 @@ body {
   border: 1px solid #ddd;
   cursor: pointer;
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.voice-item::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
+.voice-item .play-icon-container {
   background: gray;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left:20px;
+  
+}
+
+.voice-item .play-icon {
+
+  
+  width: 20px; /* 调整图标大小 */
+  height: 20px; /* 调整图标大小 */
+}
+
+.voice-item .color-blocks {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.voice-item .color-block {
+
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 2px;
 }
 
 /* Controls Section */
 .controls {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row; /* 水平排列 */
   gap: 2rem;
-  margin-top: 2rem;
-  /* 为 controls 区域添加内边距 */
-
 }
 
-/* Flexbox 布局使得下拉框按列排列 */
 .dropdowns {
-  display: flex;
+  flex: 1; /* 使 dropdowns 和 sliders 的宽度相等 */
+  width: 30%;
   flex-direction: column;
-  gap: 2rem;
-  /* 增加下拉框之间的间距 */
-  margin: 1rem;
+  gap: 1rem;
 }
 
 .dropdown-item {
   display: flex;
   flex-direction: column;
-  /* 标签和下拉框垂直排列 */
   gap: 0.5rem;
-  /* 标签与下拉框之间的间距 */
 }
 
 .dropdown-item label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
   font-weight: bold;
-  margin-bottom: 0.2rem;
-  /* 让标签与下拉框之间有适当的间距 */
 }
 
 .dropdown-item select {
@@ -186,9 +203,7 @@ body {
   border: 1px solid #ddd;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* 添加轻微的阴影 */
   transition: border-color 0.3s ease;
-  /* 增加过渡效果 */
 }
 
 .dropdown-item select:hover {
@@ -200,68 +215,131 @@ body {
   outline: none;
 }
 
-
-.sliders,
-.buttons {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  /* 可选，增加内部间距 */
-  background-color: #fff;
-  /* 可选，确保背景颜色与父容器区分 */
+.sliders {
+  margin-top: 40px;
+  margin-left: 50px;
+  flex: 2; /* 使 sliders 部分更宽 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  gap: 1rem; /* 间距 */
 }
 
+.slider-item {
+  display: grid;
+  grid-template-areas: 
+    "label range-value"
+    "slider slider"; /* 定义 label 和 range-value 在上方， slider 在下方 */
+  grid-template-columns: 1fr auto; /* label 占据剩余空间， range-value 自适应 */
+  align-items: center;
+}
 
-.sliders label {
-  margin-bottom: 0.2rem;
-  font-size: 0.9rem;
+.slider-item label {
+  grid-area: label;
+  font-size: 1rem;
+  font-weight: bold;
   color: #333;
-  display: block;
-  text-align: center;
+  margin-bottom: 0.5rem; /* 添加下边距，使 label 与输入框之间有间距 */
 }
 
-.sliders input {
-  width: 100%;
-  margin-top: 0.5rem;
+.slider-item input[type="range"] {
+  grid-area: slider;
+  width: 100%; /* 使滑块条占满容器宽度 */
+  margin-top: 0.5rem; /* 添加上边距，使滑块条与标签之间有间距 */
 }
 
-.sliders .volume {
+.slider-item .range-value {
+  grid-area: range-value;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right; /* 使范围显示在最右边 */
+  margin-bottom: 0.5rem; /* 添加下边距，使范围显示与输入框之间有间距 */
+}
+.volume {
   flex: 1;
 }
 
+/* Buttons */
 .buttons {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  flex: 0.5;
-  padding-left: 1rem;
+  justify-content: space-around; /* 左右按钮组之间的间距 */
+  align-items: center; /* 上下对齐 */
+  flex: 1; /* 控制宽度比例 */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
 }
 
-.large-mp3-icon {
-  width: 60px;
-  height: 60px;
-  background: #0072ff;
-  border-radius: 50%;
+.left-buttons,
+.right-buttons {
+  display: flex;
+  flex-direction: column; /* 垂直排列按钮 */
+  gap: 1rem; /* 按钮之间的间距 */
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 1rem; /* 按钮之间的间距 */
+}
+
+.small-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-
-.buttons button {
-  padding: 1rem;
-  background: #0072ff;
+  background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
+}
+
+.icon-button1 {
   display: flex;
+  width: 200px;
+  height: 100px;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.icon-button2 {
+  display: flex;
+  width: 60px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.icon-button3 {
+  display: flex;
+  margin-left: 40px;
+  width: 60px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 0.5rem; /* 图标和文字之间的间距 */
+  width: 30px;
 }
 
 .buttons button:hover {
@@ -270,9 +348,8 @@ body {
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
-
   .text-to-speech,
-  .controls {
+  .controls-buttons-container {
     flex-direction: column;
   }
 

@@ -93,8 +93,15 @@ body {
   border-radius: 8px;
 }
 
+/* Adjusted Search Input */
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Make sure the search container takes full width */
+}
+
 .search input {
-  width: 100%;
+  width: 100%; /* Adjust width to take full available space */
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
@@ -145,13 +152,10 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left:20px;
-  
+  left: 20px;
 }
 
 .voice-item .play-icon {
-
-  
   width: 20px; /* 调整图标大小 */
   height: 20px; /* 调整图标大小 */
 }
@@ -163,7 +167,6 @@ body {
 }
 
 .voice-item .color-block {
-
   width: 10px;
   height: 10px;
   background: gray;

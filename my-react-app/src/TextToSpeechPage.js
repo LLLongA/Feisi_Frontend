@@ -2,7 +2,7 @@ import React from 'react';
 import './TextToSpeechPage.css';
 import home from './public/home_icon.png';
 import settings from './public/settings.png';
-import notifications from './public/notifcations.png';
+import notifications from './public/notifications.png';
 import person from './public/person.png';
 import music from './public/music3.png';
 import download from './public/download2.png';
@@ -73,6 +73,16 @@ const TextToSpeechPage = () => {
               </select>
             </div>
             <div className="voice-list">
+              <div className="voice-item">
+                <div className="play-icon-container">
+                  <img src={play} alt="Play" className="play-icon" />
+                </div>
+                <span>音色m</span>
+                <div className="color-blocks">
+                  <div className="color-block"></div>
+                  <div className="color-block"></div>
+                </div>
+              </div>
               <div className="voice-item">
                 <div className="play-icon-container">
                   <img src={play} alt="Play" className="play-icon" />

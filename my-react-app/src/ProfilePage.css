@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url('./public/background-image.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 0 1rem;
+  height: 60px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.left-icon img,
+.right-icons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.right-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.admin-content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  margin-left: 40%;
+}
+
+.sidebar p {
+  margin: 10px 0;
+}
+
+.change-password,
+.api-keys {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #0072ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search input {
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modules,
+.usage {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+
+}
+
+.modules {
+  margin-bottom: 20px;
+}
+
+.modules-header,
+.usage-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.usage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modules-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #0072ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-records {
+  margin-right: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+}
+
+.add_module {
+  width: 40px;
+  margin-left: 98%;
+}
+
+.usage-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usage-table th,
+.usage-table td {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+
+  text-align: left;
+}
+
+.usage-table button {
+  padding: 5px 10px;
+  background-color: #0072ff;
+  color: white;
+  border-radius: 8px;
+
+  border: none;
+  cursor: pointer;
+}

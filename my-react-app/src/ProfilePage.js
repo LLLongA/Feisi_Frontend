@@ -28,6 +28,10 @@ const AdminPage = () => {
     navigate('/profile'); // 跳转到个人中心页面
   };
 
+  const handleModuleClick = () => {
+    navigate('/applyhistory'); // 跳转到模块申请记录
+  };
+
   const handleNotificationsClick = () => {
     // 显示通知窗口
     // 这里你可以实现一个状态来控制通知窗口的显示
@@ -64,7 +68,7 @@ const AdminPage = () => {
           <div className="modules">
             <div className="modules-header">
               <h2>可用模块</h2>
-              <button className="apply-records">申请记录</button>
+              <button className="apply-records" onClick={handleModuleClick}>申请记录</button>
             
             </div>
             <div className="modules-buttons">
@@ -77,7 +81,8 @@ const AdminPage = () => {
           
           <div className="usage">
             <div className="usage-header">
-              <h2>我的用量</h2>
+              <h2 className='
+              big'>我的用量</h2>
               <button className="apply-records">申请记录</button>
 
               <div className="search">

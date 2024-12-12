@@ -136,7 +136,12 @@ button {
   margin-right: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  width: 130px;
+  font-size: 20px;
+}
 
+.big {
+  width: 110px;
 }
 
 .add_module {

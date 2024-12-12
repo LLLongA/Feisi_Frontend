@@ -5,7 +5,8 @@ import RegisterPage from './RegisterPage';
 import HomePage from './HomePage';
 import TextToSpeechPage from './TextToSpeechPage'; 
 import ProfilePage from './ProfilePage';
-import ApplyPage from './ApplyPage'; // 确保导入名称一致
+import ApplyPage from './ApplyPage'; 
+import ApplyHistoryPage from './ApplyHistoryPage';
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/text-to-speech" element={<TextToSpeechPage />} /> 
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/apply" element={<ApplyPage />} /> {/* 确保使用名称一致 */}
+          <Route path="/apply" element={<ApplyPage />} />
+          <Route path="/applyhistory" element={<ApplyHistoryPage />} />
 
         </Routes>
       </div>

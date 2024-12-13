@@ -7,6 +7,10 @@ import TextToSpeechPage from './TextToSpeechPage';
 import ProfilePage from './ProfilePage';
 import ApplyPage from './ApplyPage'; 
 import ApplyHistoryPage from './ApplyHistoryPage';
+import Detail from './Detail';
+import AddUsage from './AddUsage';
+import UsageHisotry from './UsageHistory';
+import UsageDetail from './UsageDetail';
 
 
 function App() {
@@ -21,6 +25,14 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/apply" element={<ApplyPage />} />
           <Route path="/applyhistory" element={<ApplyHistoryPage />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/addusage" element={<AddUsage />} />
+          <Route path="/usagehistory" element={<UsageHisotry />} />
+          <Route path="/usagedetail" element={<UsageDetail />} />
+
+
+
+
 
         </Routes>
       </div>

@@ -1,8 +1,8 @@
 /* Global Styles */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
   }
   
   .home-container {
@@ -31,13 +31,13 @@ body {
     display: flex;
     gap: 1rem;
   }
-
+  
   h1 {
     margin-left: 30px;
   }
   
   /* Main Content Section */
-  .main-content {
+  .form-container {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -46,13 +46,14 @@ body {
     border-radius: 8px;
     margin: 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
+}
+
   
   .form-section {
     display: flex;
@@ -82,8 +83,8 @@ body {
     width: 800px;
     height: 300px;
   }
-
-  .form-group input[type="text"]{
+  
+  .form-group input[type="text"] {
     padding: 0.8rem;
     font-size: 1rem;
     border-radius: 8px;
@@ -94,7 +95,6 @@ body {
     width: 400px;
     height: 50px;
   }
-
   
   .form-group input[type="text"]:hover,
   .form-group textarea:hover {
@@ -141,11 +141,30 @@ body {
     cursor: pointer;
     margin-top: 1rem;
     height: 10px;
-    width: 30%;
+    width: 200px;
   }
   
   .submit-button:hover {
     background-color: #005bb5;
+  }
+  
+  /* Status Section */
+  .status-section {
+    display: flex;
+
+  }
+  
+  .status-item {
+    display: flex;
+    flex-direction: row; /* 改为水平排列 */
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 20px;
+  }
+  
+  .status-approved {
+    color: blue;
+    cursor: pointer;
   }
   
   /* Responsive Media Queries */

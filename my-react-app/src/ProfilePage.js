@@ -32,6 +32,16 @@ const AdminPage = () => {
     navigate('/applyhistory'); // 跳转到模块申请记录
   };
 
+  const handleApplyUsageClick = () => {
+    navigate('/usagehistory'); // 跳转到模块申请记录
+  };
+
+  
+
+  const handleAddUsageClick = () => {
+    navigate('/addusage'); // 跳转到模块申请记录
+  };
+
   const handleNotificationsClick = () => {
     // 显示通知窗口
     // 这里你可以实现一个状态来控制通知窗口的显示
@@ -83,7 +93,7 @@ const AdminPage = () => {
             <div className="usage-header">
               <h2 className='
               big'>我的用量</h2>
-              <button className="apply-records">申请记录</button>
+              <button className="apply-records" onClick={handleApplyUsageClick}>申请记录</button>
 
               <div className="search">
               <input type="text" placeholder="" />
@@ -103,7 +113,7 @@ const AdminPage = () => {
                   <td>文本转语音</td>
                   <td>5000/100000 字</td>
                   <td>2028-12-31</td>
-                  <td><button>申请增加</button></td>
+                  <td><button onClick={handleAddUsageClick} >申请增加</button></td>
                 </tr>
                 <tr>
                   <td>****</td>

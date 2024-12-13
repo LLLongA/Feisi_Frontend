@@ -1,5 +1,5 @@
 import React from 'react';
-import './ApplyHistoryPage.css';
+import './UsageHistory.css';
 import home from './public/home_icon.png';
 import settings from './public/settings.png';
 import notifications from './public/notifications.png';
@@ -15,7 +15,7 @@ const ApplyHistoryPage = () => {
   };
 
   const handledetailClick = () => {
-    navigate('/detail'); // 跳转到主页
+    navigate('/usagedetail'); // 跳转到主页
   };
 
   const handleSettingsClick = () => {
@@ -32,7 +32,7 @@ const ApplyHistoryPage = () => {
   };
 
   const handleBackClick = () => {
-    navigate('/profile'); // 返回申请页面
+    navigate('/apply'); // 返回申请页面
   };
 
   return (
@@ -47,7 +47,7 @@ const ApplyHistoryPage = () => {
           <img src={person} alt="Profile" onClick={handleProfileClick} />
         </div>
       </nav>
-      <h1>权限申请</h1>
+      <h1>用量申请</h1>
       <div className="main-content1">
         <div className="top-bar">
           <img className="back-button" src={undo} alt="Back" onClick={handleBackClick} />

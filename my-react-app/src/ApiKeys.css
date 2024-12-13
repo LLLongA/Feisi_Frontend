@@ -1,0 +1,120 @@
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.filters select{
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #DBEBFF;
+    width: 100px;
+}
+
+.filters input {
+    width: 30%;
+}
+
+.filters .new-button {
+    background-color: #007bff; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    padding: 5px 10px; /* 按钮内边距 */
+    border: none; /* 去掉边框 */
+    border-radius: 4px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停样式 */
+}
+
+.new-button{
+    margin-left: 60%;
+    width: 100px;
+}
+
+.filters .new-button:hover {
+    background-color: #0056b3; /* 悬停效果 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #DBEBFF;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50vw; /* 宽度占页面的一半 */
+    height: 50vh; /* 高度占页面的一半 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* 如果内容超出，允许滚动 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal-content label {
+    margin-top: 10px; /* 标签与输入框之间的间距 */
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.modal-content .input1 {
+    width: 200px;
+}
+
+.modal-content .input2 {
+    width: 400px;
+    height: 100px;
+}
+
+.modal-content .input3 {
+    width: 200px;
+}
+
+
+
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.checkbox-group label {
+    width: 30%; /* 每个复选框占据30%宽度 */
+    margin-right: 5%; /* 右边距 */
+}
+
+.checkbox-group label:nth-child(3n) {
+    margin-right: 0; /* 每三项的最后一项不需要右边距 */
+}

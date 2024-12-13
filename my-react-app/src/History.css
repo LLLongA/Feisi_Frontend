@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('./public/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0 1rem;
+    height: 60px;
+}
+
+.left-icon img,
+.right-icons img {
+    height: 40px;
+    cursor: pointer;
+}
+
+.right-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.main-content1 {
+    flex: 1; /* 让主内容部分占据剩余空间 */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* 适当的外边距 */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start; /* 让选择框和输入框顶部对齐 */
+}
+
+.filters select {
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #DBEBFF;
+    min-width: 120px; /* 设置最小宽度以避免过小 */
+}
+
+.date-container {
+    position: relative; /* 设置相对定位 */
+    margin-right: 10px; /* 输入框之间的间距 */
+}
+
+.date-container label {
+    position: absolute; /* 绝对定位 */
+    top: -10px; /* 根据需要调整标签位置 */
+    left: 10px; /* 根据需要调整标签位置 */
+    font-size: 12px; /* 标签字体大小 */
+    background-color: #fff; /* 背景颜色与输入框一致 */
+    padding: 0 5px; /* 标签的内边距 */
+}
+
+.date-container input {
+    width: 1000px; /* 设置输入框的宽度 */
+    padding: 5px;
+    background-color: #DBEBFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #DBEBFF;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

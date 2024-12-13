@@ -11,6 +11,9 @@ import Detail from './Detail';
 import AddUsage from './AddUsage';
 import UsageHisotry from './UsageHistory';
 import UsageDetail from './UsageDetail';
+import History from './History';
+import ApiKeys from './ApiKeys';
+
 
 
 function App() {
@@ -29,6 +32,8 @@ function App() {
           <Route path="/addusage" element={<AddUsage />} />
           <Route path="/usagehistory" element={<UsageHisotry />} />
           <Route path="/usagedetail" element={<UsageDetail />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/apikeys" element={<ApiKeys />} />
 
 
 

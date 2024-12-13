@@ -16,6 +16,7 @@ const ApplyPage = () => {
   const handleSettingsClick = () => {
     navigate('/admin'); // 跳转到管理后台
   };
+  
 
   const handleProfileClick = () => {
     navigate('/profile'); // 跳转到个人中心页面

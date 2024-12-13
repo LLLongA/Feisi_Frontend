@@ -42,6 +42,10 @@ const AdminPage = () => {
     navigate('/addusage'); // 跳转到模块申请记录
   };
 
+  const handleApikeysClick = () => {
+    navigate('/apikeys'); // 跳转到模块申请记录
+  };
+
   const handleNotificationsClick = () => {
     // 显示通知窗口
     // 这里你可以实现一个状态来控制通知窗口的显示
@@ -71,7 +75,7 @@ const AdminPage = () => {
           <p>邮箱</p>
           <p>*********@yuaiweiwu.com</p>
           <button className="change-password">修改密码</button>
-          <button className="api-keys">API Keys</button>
+          <button className="api-keys" onClick={handleApikeysClick} >API Keys</button>
         </div>
         
         <div className="main-content">

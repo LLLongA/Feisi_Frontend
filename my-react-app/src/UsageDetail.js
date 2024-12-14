@@ -6,7 +6,7 @@ import notifications from './public/notifications.png';
 import person from './public/person.png';
 import { useNavigate } from 'react-router-dom';
 
-const ApplyPage = () => {
+const UsageDetail = () => {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
@@ -89,4 +89,4 @@ const ApplyPage = () => {
   );
 };
 
-export default ApplyPage;
+export default UsageDetail;

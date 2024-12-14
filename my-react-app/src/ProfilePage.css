@@ -95,7 +95,7 @@ button {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* 确保子元素从顶部开始排列 */
 }
 
 .modules,
@@ -103,12 +103,14 @@ button {
   padding: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-
+  margin: 0; /* 确保没有外部间距 */
 }
 
 .modules {
-  margin-bottom: 20px;
+  margin-bottom: 10px; 
 }
+
+
 
 .modules-header,
 .usage-header {

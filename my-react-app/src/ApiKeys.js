@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const APIKeysPage = () => {
     const navigate = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
+    const [isNewModalOpen, setNewModalOpen] = useState(false);
 
 
     const handleHomeClick = () => {
@@ -28,18 +29,18 @@ const APIKeysPage = () => {
         alert('显示通知窗口');
     };
 
-    const handleNewClick = () => {
-        setModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setModalOpen(false);
-    };
-
+    const handleNewClick = () => setModalOpen(true);
+    const handleNewModalClick = () => setNewModalOpen(true); 
+    const handleCloseModal = () => setModalOpen(false);
+    const handleCloseNewModal = () => setNewModalOpen(false); 
     const handleSave = () => {
-        // 处理保存逻辑
         alert('保存成功');
         setModalOpen(false);
+    };
+
+    const handleNewSave = () => {
+        alert('新模态框保存成功');
+        setNewModalOpen(false);
     };
 
     return (
@@ -82,7 +83,7 @@ const APIKeysPage = () => {
                             <td>已启用</td>
                             <td>这是一个描述</td>
                             <td>
-                                <a href="#">编辑</a>
+                                <a onClick={handleNewModalClick} href="#">编辑</a>
                                 <span> | </span>
                                 <a href="#" style={{ color: 'red' }}>删除</a>
                             </td>
@@ -92,12 +93,11 @@ const APIKeysPage = () => {
                             <td>未启用</td>
                             <td>这是另一个描述</td>
                             <td>
-                                <a href="#">编辑</a>
+                                <a onClick={handleNewModalClick} href="#">编辑</a>
                                 <span> | </span>
                                 <a href="#" style={{ color: 'red' }}>删除</a>
                             </td>
                         </tr>
-                        {/* 其他行 */}
                     </tbody>
                 </table>
             </div>
@@ -105,8 +105,6 @@ const APIKeysPage = () => {
             {isModalOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content">
-                        <h2>新建 API Key</h2>
-
                         <label>名称</label>
                         <input className="input1" type="text" placeholder="请输入名称" />
 
@@ -117,29 +115,40 @@ const APIKeysPage = () => {
                         <input className="input3" type="text" placeholder="请输入 Key" />
 
                         <label>权限</label>
-                        <select>
-                            <option className="input4" >全部可用模块</option>
-                            {/* 其他选项 */}
+                        <select className="input4">
+                            <option  >全部可用模块</option>
                         </select>
                         <div className="checkbox-group">
+                            <div>
                             <label>
                                 <input type="checkbox" /> 文本转语音
                             </label>
+                            </div>
+                            <div>
                             <label>
-                                <input type="checkbox" /> 模块***
+                                <input type="checkbox" /> 文本转语音
                             </label>
+                            </div>
+                            <div>
                             <label>
-                                <input type="checkbox" /> 模块111
+                                <input type="checkbox" /> 文本转语音
                             </label>
+                            </div>
+                            <div>
                             <label>
-                                <input type="checkbox" /> 模块222
+                                <input type="checkbox" /> 文本转语音
                             </label>
+                            </div>
+                            <div>
                             <label>
-                                <input type="checkbox" /> 模块333
+                                <input type="checkbox" /> 文本转语音
                             </label>
+                            </div>
+                            <div>
                             <label>
-                                <input type="checkbox" /> 模块444
+                                <input type="checkbox" /> 文本转语音
                             </label>
+                            </div>
                         </div>
 
                         <div className="modal-buttons">
@@ -150,6 +159,62 @@ const APIKeysPage = () => {
 
                 </div>
             )}
+
+            {isNewModalOpen && (
+                <div className="modal-overlay">
+                <div className="modal-content">
+                    <label>名称</label>
+                    <input className="input1" type="text" placeholder="请输入名称" />
+
+                    <label>用途</label>
+                    <input className="input2" type="text" placeholder="请输入用途" />
+
+                    <label>权限</label>
+                    <select className="input4">
+                        <option  >全部可用模块</option>
+                    </select>
+                    <div className="checkbox-group">
+                        <div>
+                        <label>
+                            <input type="checkbox" /> 文本转语音
+                        </label>
+                        </div>
+                        <div>
+                        <label>
+                            <input type="checkbox" /> 文本转语音
+                        </label>
+                        </div>
+                        <div>
+                        <label>
+                            <input type="checkbox" /> 文本转语音
+                        </label>
+                        </div>
+                        <div>
+                        <label>
+                            <input type="checkbox" /> 文本转语音
+                        </label>
+                        </div>
+                        <div>
+                        <label>
+                            <input type="checkbox" /> 文本转语音
+                        </label>
+                        </div>
+                        <div>
+                        <label>
+                            <input type="checkbox" /> 文本转语音
+                        </label>
+                        </div>
+                    </div>
+
+                    <div className="modal-buttons">
+                        <button onClick={handleSave}>保存</button>
+                        <button onClick={handleCloseNewModal}>取消</button>
+                    </div>
+                </div>
+
+            </div>
+            )}
+
         </div>
     );
 };

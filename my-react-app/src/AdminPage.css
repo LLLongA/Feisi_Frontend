@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('./public/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0 1rem;
+    height: 60px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: row; /* 水平排列 */
+    height: 100vh; /* 使容器的高度占满整个视口 */
+}
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    width: 10%; 
+    background-color: #e9ecef;
+    padding: 20px; 
+    box-sizing: border-box; 
+    height: calc(100vh - 60px); 
+}
+
+.maincontainer {
+    width: 90%; /* 占据 2/3 的宽度 */
+    background-color: #fff; /* 可以根据需要调整 */
+    padding: 20px; /* 内边距可根据需要调整 */
+    box-sizing: border-box; /* 包含内边距和边框在宽度计算中 */
+    height: calc(100vh - 60px); /* 使主内容区高度占满视口减去导航栏高度 */
+    overflow-y: auto; /* 如果内容超出，可以滚动 */
+}
+
+li {
+    font-size: 2rem;
+    color: #368DFF;
+    margin-top: 120px; 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+}

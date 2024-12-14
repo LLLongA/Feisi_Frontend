@@ -13,6 +13,9 @@
 
 .filters input {
     width: 30%;
+    border-radius: 4px;
+    height: 25px;
+
 }
 
 .filters .new-button {
@@ -65,18 +68,19 @@ th {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 50vw; /* 宽度占页面的一半 */
-    height: 50vh; /* 高度占页面的一半 */
+    width: 50vw; 
+    height: 50vh; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* 如果内容超出，允许滚动 */
+    overflow-y: auto; 
     display: flex;
-    flex-direction: column; /* 垂直排列 */
+    flex-direction: column; 
     background-color: #fff;
     border-radius: 8px;
 }
 
 .modal-content label {
-    margin-top: 10px; /* 标签与输入框之间的间距 */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .modal-buttons {
@@ -88,33 +92,75 @@ th {
 
 .modal-content .input1 {
     width: 200px;
+    border-radius: 4px; 
+    height: 50px;
+
 }
 
 .modal-content .input2 {
     width: 400px;
     height: 100px;
+    border-radius: 4px; 
+
 }
 
 .modal-content .input3 {
     width: 200px;
+    border-radius: 4px; 
+
 }
 
+.input4 {
+    width: 200px;
+    border-radius: 4px; 
+    margin-bottom: 20px;
+    height: 50px;
 
-
+}
 
 .checkbox-group {
-    display: flex;
-    flex-wrap: wrap; /* 允许换行 */
-    margin: 10px 0;
-    background-color: #fff;
-    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+
 }
 
 .checkbox-group label {
-    width: 30%; /* 每个复选框占据30%宽度 */
-    margin-right: 5%; /* 右边距 */
+    display: flex;
+    align-items: center;
 }
 
-.checkbox-group label:nth-child(3n) {
-    margin-right: 0; /* 每三项的最后一项不需要右边距 */
+
+.checkbox-group div {
+    flex-wrap: wrap; 
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+
+    width: 350px;
+
+
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px; 
+}
+
+.modal-buttons button {
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #007bff; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+    background-color: #0056b3; 
 }

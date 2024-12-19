@@ -32,12 +32,25 @@ const UserReview = () => {
         navigate('/userreview');
     };
 
-    const handleNotificationsClick = () => {
-        alert('显示通知窗口');
+    const handleUsageApplyReviewClick = () => {
+        navigate('/usageapplyreview');
     };
 
-    const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
+    const handleUserApplyReviewClick = () => {
+        navigate('/userapplyreview');
+    };
+
+    const handleSystemSettingClick = () => {
+        navigate('/systemsetting');
+    };
+
+    const handleapimanageClick = () => {
+        navigate('/apimanage');
+    };
+
+
+    const handleNotificationsClick = () => {
+        alert('显示通知窗口');
     };
 
 
@@ -60,10 +73,10 @@ const UserReview = () => {
                     <ul>
                         <li onClick={handleSettingsClick}>用户管理</li>
                         <li onClick={handleUserReviewClick}>账号审核</li>
-                        <li>权限申请审核</li>
-                        <li>用量申请审核</li>
-                        <li>API Key 管理</li>
-                        <li>系统设置</li>
+                        <li  onClick={handleUserApplyReviewClick}>权限申请审核</li>
+                        <li onClick={handleUsageApplyReviewClick}>用量申请审核 </li>
+                        <li onClick={handleapimanageClick}>API Key 管理</li>
+                        <li onClick={handleSystemSettingClick}>系统设置</li>
                     </ul>
                 </div>
             

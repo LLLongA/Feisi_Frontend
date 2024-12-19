@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('./public/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0 1rem;
+    height: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    width: 10%;
+    background-color: #DBEBFF;
+    padding: 20px;
+    border: none;
+    box-sizing: border-box;
+    height: calc(100vh - 60px);
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar li {
+    font-size: 1.2rem;
+    color: #368DFF;
+    margin: 20px 0; /* 调整间距 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;
+    cursor: pointer;
+    text-align: center; /* 确保文本居中 */
+}
+
+

@@ -16,7 +16,10 @@ import ApiKeys from './ApiKeys';
 import AdminPage from './AdminPage';
 import HistoryPage from './HistoryPage';
 import UserReview from './UserReview';
-
+import SystemSetting from './SystemSetting';
+import ApiManage from './ApiManage';
+import UsageApplyReview from './UsageApplyReview';
+import UserApplyReview from './UserApplyReview';
 
 function App() {
   return (
@@ -39,6 +42,12 @@ function App() {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/history2" element={<HistoryPage />} />
           <Route path="/userreview" element={<UserReview />} />
+          <Route path="/systemsetting" element={<SystemSetting />} />
+          <Route path="/apimanage" element={<ApiManage />} />
+          <Route path="/usageapplyreview" element={<UsageApplyReview />} />
+          <Route path="/userapplyreview" element={<UserApplyReview />} />
+
+
 
         </Routes>
       </div>

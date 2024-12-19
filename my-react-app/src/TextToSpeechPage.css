@@ -299,7 +299,6 @@ body {
 
 .icon-button1 {
   display: flex;
-  width: 200px;
   height: 100px;
   align-items: center;
   justify-content: center;
@@ -313,7 +312,6 @@ body {
 
 .icon-button2 {
   display: flex;
-  width: 60px;
   height: 40px;
   align-items: center;
   justify-content: center;
@@ -328,7 +326,6 @@ body {
 .icon-button3 {
   display: flex;
   margin-left: 40px;
-  width: 60px;
   height: 40px;
   align-items: center;
   justify-content: center;
@@ -336,7 +333,6 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 0.5rem;
   cursor: pointer;
 }
 

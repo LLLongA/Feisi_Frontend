@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './UserReview.css';
+import './UserReviewHistory.css';
 
 import home from './public/home_icon.png';
 import settings from './public/settings.png';
@@ -7,8 +7,9 @@ import notifications from './public/notifications.png';
 import person from './public/person.png';
 import { useNavigate } from 'react-router-dom';
 import user from './public/person.png';
+import back from './public/undo.png'
 
-const UserReview = () => {
+const UserReviewHistory = () => {
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -42,10 +43,6 @@ const UserReview = () => {
 
     const handleSystemSettingClick = () => {
         navigate('/systemsetting');
-    };
-
-    const handleUserReviewHistoryClick = () => {
-        navigate('/userreviewhistory');
     };
 
     const handleapimanageClick = () => {
@@ -88,14 +85,12 @@ const UserReview = () => {
 
                     <div className='titlecontain'>
 
-                    <h1>账号审核</h1>
-                    <button className="button grey" onClick={handleUserReviewHistoryClick}>历史记录</button>
+                    <h1>账号审核-历史记录</h1>
                     </div>
 
                     <div className='rightcontain'>
                     <div className="buttons-container">
-                        <button className="button blue">通过选中项</button>
-                        <button className="button red">驳回选中项</button>
+                        <img src={back}></img>
                         <input className="search-container"type="text" placeholder="搜索..." />
 
                     </div>
@@ -103,7 +98,6 @@ const UserReview = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th><input type="checkbox" /></th>
                                 <th>姓名</th>
                                 <th>部门</th>
                                 <th>职位</th>
@@ -113,7 +107,6 @@ const UserReview = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="checkbox" /></td>
                                 <td>刘梦涵</td>
                                 <td>互联网产品部</td>
                                 <td>产品经理实习生</td>
@@ -125,7 +118,6 @@ const UserReview = () => {
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" /></td>
                                 <td>新用户</td>
                                 <td>111111</td>
                                 <td>产品经理实习生</td>
@@ -153,4 +145,4 @@ const UserReview = () => {
     );
 };
 
-export default UserReview;
+export default UserReviewHistory;

@@ -20,6 +20,10 @@ body {
     height: 100vh;
 }
 
+img{
+    height: 50px;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -87,6 +91,7 @@ h1 {
     align-items: center;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .search-container {
@@ -132,15 +137,15 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: none;
+    
 }
 
 th,
 td {
     padding: 10px;
-    text-align: center  ;
-    border: none;
+    text-align: center;
 
+    border-bottom: 1px solid #ddd;
 }
 
 thead {

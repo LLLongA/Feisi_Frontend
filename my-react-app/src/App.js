@@ -20,6 +20,7 @@ import SystemSetting from './SystemSetting';
 import ApiManage from './ApiManage';
 import UsageApplyReview from './UsageApplyReview';
 import UserApplyReview from './UserApplyReview';
+import UserReviewHistory from './UserReviewHistory';
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
           <Route path="/apimanage" element={<ApiManage />} />
           <Route path="/usageapplyreview" element={<UsageApplyReview />} />
           <Route path="/userapplyreview" element={<UserApplyReview />} />
+          <Route path="/userreviewhistory" element={<UserReviewHistory />} />
+
 
 
 

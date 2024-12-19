@@ -4,7 +4,7 @@
     align-items: center; /* 垂直居中对齐 */
 }
 
-.filters select{
+.filters select {
     margin-right: 10px;
     padding: 5px;
     background-color: #DBEBFF;
@@ -15,7 +15,6 @@
     width: 30%;
     border-radius: 4px;
     height: 25px;
-
 }
 
 .filters .new-button {
@@ -27,7 +26,7 @@
     cursor: pointer; /* 鼠标悬停样式 */
 }
 
-.new-button{
+.new-button {
     margin-left: 60%;
     width: 100px;
 }
@@ -74,8 +73,6 @@ th {
     overflow-y: auto; 
     display: flex;
     flex-direction: column; 
-    background-color: #fff;
-    border-radius: 8px;
 }
 
 .modal-content label {
@@ -89,25 +86,21 @@ th {
     margin-top: 20px;
 }
 
-
 .modal-content .input1 {
     width: 200px;
     border-radius: 4px; 
     height: 50px;
-
 }
 
 .modal-content .input2 {
     width: 400px;
     height: 100px;
     border-radius: 4px; 
-
 }
 
 .modal-content .input3 {
     width: 200px;
     border-radius: 4px; 
-
 }
 
 .input4 {
@@ -115,20 +108,17 @@ th {
     border-radius: 4px; 
     margin-bottom: 20px;
     height: 50px;
-
 }
 
 .checkbox-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-
 }
 
 .checkbox-group label {
     display: flex;
     align-items: center;
 }
-
 
 .checkbox-group div {
     flex-wrap: wrap; 
@@ -139,10 +129,7 @@ th {
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease;
-
     width: 350px;
-
-
 }
 
 .modal-buttons {
@@ -163,4 +150,72 @@ th {
 
 .modal-buttons button:hover {
     background-color: #0056b3; 
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* 调整与上方元素的间距 */
+}
+
+.toggle-label {
+    margin-right: 10px; /* 滑动按钮与标签之间的间距 */
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #2196F3;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.keycontain{
+    display: flex;
+}
+
+.copy,.eye {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+
 }

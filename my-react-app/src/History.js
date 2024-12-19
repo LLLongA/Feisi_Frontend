@@ -52,11 +52,9 @@ const ApplyHistoryPage = () => {
                 <div className="filters">
                     <select>
                         <option>功能模块</option>
-                        {/* 其他选项 */}
                     </select>
                     <select>
                         <option>结果</option>
-                        {/* 其他选项 */}
                     </select>
                     <div className="date-container">
                         <label htmlFor="startDate">开始时间</label>

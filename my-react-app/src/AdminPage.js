@@ -6,6 +6,7 @@ import settings from './public/settings.png';
 import notifications from './public/notifications.png';
 import person from './public/person.png';
 import { useNavigate } from 'react-router-dom';
+import user from './public/person.png';
 
 const AdminPage = () => {
     const navigate = useNavigate();
@@ -44,9 +45,7 @@ const AdminPage = () => {
                 </div>
             </nav>
 
-
             <div className='container'>
-
                 <div className='sidebar'>
                     <ul>
                         <li onClick={handleHomeClick}>用户管理</li>
@@ -59,32 +58,47 @@ const AdminPage = () => {
                 </div>
 
                 <div className='maincontainer'>
-                    <div className='search1'>
-                        <input type='text' placeholder='输入用户名进行搜索' />
-                    </div>
-                    <div className='userList1'>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-                        <div className='userItem1'>姓名 - 部门 - 职位</div>
-
+                    <div className='leftside'>
+                        <div className='search1'>
+                            <input type='text' placeholder='输入用户名进行搜索' value={searchTerm} onChange={handleSearchChange} />
+                        </div>
+                        <div className='userList1'>
+                            {Array(14).fill().map((_, index) => (
+                                <div className='userItem1' key={index}>
+                                    <div className="color-block"></div>
+                                    <div className="user-info">
+                                        <div>姓名</div>
+                                        <div>部门-职位</div>
+                                    </div>
+                                    <div className="arrow-icon">→</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className='detailsContainer1'>
-                        <div className='userInfo1'>
-                            <div>姓名1</div>
-                            <div>可用模块</div>
-                            <button>文本转语音</button>
-                            <button>模块1</button>
+                    <div className='userInfo1'>
+                            <img src={user} alt="User Icon" />
+                            <div className="info">
+                                <div>姓名1</div>
+                                <div>部门</div>
+                                <div>职位</div>
+                            </div>
+                            <div className="separator"></div>
+                            <div className="modules">
+                                <div>可用模块</div>
+                                <div className="modules-buttons">
+                                    <button>文本转语音</button>
+                                    <button>模块1</button>
+                                    <button>模块2</button>
+                                </div>
+                            </div>
                         </div>
                         <div className='usageDetails1'>
+                            <div className='title'>
                             <h3>剩余用量</h3>
+                            <button className='button3'>历史使用记录</button>
+                            </div>
+
                             <table>
                                 <thead>
                                     <tr>
@@ -114,10 +128,7 @@ const AdminPage = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
     );
 };

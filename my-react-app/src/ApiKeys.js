@@ -1,20 +1,31 @@
 import React, { useState } from 'react';
+import Switch from 'react-switch';
 import './ApiKeys.css';
-
 import home from './public/home_icon.png';
 import settings from './public/settings.png';
 import notifications from './public/notifications.png';
 import person from './public/person.png';
 import { useNavigate } from 'react-router-dom';
+import copy from './public/copy.png';
+import eye from './public/eye.png';
+
 
 const APIKeysPage = () => {
     const navigate = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
     const [isNewModalOpen, setNewModalOpen] = useState(false);
-
+    const [isEnabled, setIsEnabled] = useState(false);
+    const [isNewEnabled, setIsNewEnabled] = useState(false);
 
     const handleHomeClick = () => {
         navigate('/home');
+    };
+
+    const handleToggleChange = () => {
+        setIsEnabled(!isEnabled);
+    };
+    const handleNewToggleChange = () => {
+        setIsNewEnabled(!isNewEnabled);
     };
 
     const handleSettingsClick = () => {
@@ -30,9 +41,9 @@ const APIKeysPage = () => {
     };
 
     const handleNewClick = () => setModalOpen(true);
-    const handleNewModalClick = () => setNewModalOpen(true); 
+    const handleNewModalClick = () => setNewModalOpen(true);
     const handleCloseModal = () => setModalOpen(false);
-    const handleCloseNewModal = () => setNewModalOpen(false); 
+    const handleCloseNewModal = () => setNewModalOpen(false);
     const handleSave = () => {
         alert('保存成功');
         setModalOpen(false);
@@ -108,46 +119,65 @@ const APIKeysPage = () => {
                         <label>名称</label>
                         <input className="input1" type="text" placeholder="请输入名称" />
 
+                        <div className="toggle-container">
+                            <label className="toggle-label">启用状态</label>
+                            <Switch
+                                onChange={handleToggleChange}
+                                checked={isEnabled}
+                                offColor="#d3d3d3"
+                                onColor="#2196F3"  
+                                uncheckedIcon={false}
+                                checkedIcon={false}
+                            />
+                        </div>
+
+
                         <label>用途</label>
                         <input className="input2" type="text" placeholder="请输入用途" />
 
+                        <div className='keycontain'>
                         <label>Key</label>
+                        <img src={eye} className='eye'></img>
+                        <img src={copy} className='copy'></img>
+
+                        </div>
+
                         <input className="input3" type="text" placeholder="请输入 Key" />
 
                         <label>权限</label>
                         <select className="input4">
-                            <option  >全部可用模块</option>
+                            <option>全部可用模块</option>
                         </select>
                         <div className="checkbox-group">
                             <div>
-                            <label>
-                                <input type="checkbox" /> 文本转语音
-                            </label>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
                             </div>
                             <div>
-                            <label>
-                                <input type="checkbox" /> 文本转语音
-                            </label>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
                             </div>
                             <div>
-                            <label>
-                                <input type="checkbox" /> 文本转语音
-                            </label>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
                             </div>
                             <div>
-                            <label>
-                                <input type="checkbox" /> 文本转语音
-                            </label>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
                             </div>
                             <div>
-                            <label>
-                                <input type="checkbox" /> 文本转语音
-                            </label>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
                             </div>
                             <div>
-                            <label>
-                                <input type="checkbox" /> 文本转语音
-                            </label>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
                             </div>
                         </div>
 
@@ -156,65 +186,75 @@ const APIKeysPage = () => {
                             <button onClick={handleCloseModal}>取消</button>
                         </div>
                     </div>
-
                 </div>
             )}
 
             {isNewModalOpen && (
                 <div className="modal-overlay">
-                <div className="modal-content">
-                    <label>名称</label>
-                    <input className="input1" type="text" placeholder="请输入名称" />
+                    <div className="modal-content">
+                        <label>名称</label>
+                        <input className="input1" type="text" placeholder="请输入名称" />
 
-                    <label>用途</label>
-                    <input className="input2" type="text" placeholder="请输入用途" />
+                        <div className="toggle-container">
+                            <label className="toggle-label">启用状态</label>
+                            <Switch
+                                onChange={handleNewToggleChange}
+                                checked={isNewEnabled}
+                                offColor="#d3d3d3"
+                                onColor="#2196F3"  
+                                uncheckedIcon={false}
+                                checkedIcon={false}
+                            />
+                        </div>
 
-                    <label>权限</label>
-                    <select className="input4">
-                        <option  >全部可用模块</option>
-                    </select>
-                    <div className="checkbox-group">
-                        <div>
-                        <label>
-                            <input type="checkbox" /> 文本转语音
-                        </label>
-                        </div>
-                        <div>
-                        <label>
-                            <input type="checkbox" /> 文本转语音
-                        </label>
-                        </div>
-                        <div>
-                        <label>
-                            <input type="checkbox" /> 文本转语音
-                        </label>
-                        </div>
-                        <div>
-                        <label>
-                            <input type="checkbox" /> 文本转语音
-                        </label>
-                        </div>
-                        <div>
-                        <label>
-                            <input type="checkbox" /> 文本转语音
-                        </label>
-                        </div>
-                        <div>
-                        <label>
-                            <input type="checkbox" /> 文本转语音
-                        </label>
-                        </div>
-                    </div>
 
-                    <div className="modal-buttons">
-                        <button onClick={handleSave}>保存</button>
-                        <button onClick={handleCloseNewModal}>取消</button>
+                        <label>用途</label>
+                        <input className="input2" type="text" placeholder="请输入用途" />
+
+                        <label>权限</label>
+                        <select className="input4">
+                            <option>全部可用模块</option>
+                        </select>
+                        <div className="checkbox-group">
+                            <div>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" /> 文本转语音
+                                </label>
+                            </div>
+                        </div>
+
+                        <div className="modal-buttons">
+                            <button onClick={handleNewSave}>保存</button>
+                            <button onClick={handleCloseNewModal}>取消</button>
+                        </div>
                     </div>
                 </div>
-
-            </div>
             )}
-
         </div>
     );
 };

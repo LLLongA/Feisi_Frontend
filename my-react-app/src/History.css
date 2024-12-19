@@ -4,12 +4,6 @@ body {
     background-color: #f0f0f0;
 }
 
-.home-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,6 +13,17 @@ body {
     padding: 0 1rem;
     height: 60px;
 }
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+
 
 .left-icon img,
 .right-icons img {
@@ -102,4 +107,17 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.filters {
+    display: flex;
+}
+
+.date-container {
+    flex: 0.5; /* 可以保持不变 */
+    margin-left: 10%; /* 减少 margin-left */
+}
+
+.date-container:first-child {
+    margin-left: 0; /* 第一个 date-container 移除左侧边距 */
 }

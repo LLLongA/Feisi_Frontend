@@ -50,19 +50,37 @@ button {
   border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center; /* 居中对齐 */
+  overflow: hidden; /* 防止内容溢出 */
 }
 
 .profile-icon {
   width: 60px;
   height: 60px;
   margin-bottom: 20px;
-  margin-left: 40%;
 }
 
 .sidebar p {
   margin: 10px 0;
+  text-align: center; /* 居中文本 */
 }
+
+.change-password, .api-keys {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* 按钮宽度与容器宽度一致 */
+  text-align: center; /* 居中文本 */
+}
+
+.change-password:hover, .api-keys:hover {
+  background-color: #0056b3;
+}
+
 
 .change-password,
 .api-keys {
@@ -143,7 +161,12 @@ button {
 }
 
 .big {
-  width: 110px;
+  width: 130px;
+}
+
+.small {
+  width: 100px;
+
 }
 
 .add_module {

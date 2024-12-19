@@ -14,6 +14,7 @@ import UsageDetail from './UsageDetail';
 import History from './History';
 import ApiKeys from './ApiKeys';
 import AdminPage from './AdminPage';
+import HistoryPage from './HistoryPage';
 
 
 function App() {
@@ -35,12 +36,7 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/apikeys" element={<ApiKeys />} />
           <Route path="/admin" element={<AdminPage />} />
-
-
-
-
-
-
+          <Route path="/history2" element={<HistoryPage />} />
         </Routes>
       </div>
     </Router>

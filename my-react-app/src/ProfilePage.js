@@ -81,7 +81,7 @@ const AdminPage = () => {
         <div className="main-content">
           <div className="modules">
             <div className="modules-header">
-              <h2>可用模块</h2>
+              <h2 className='small'>可用模块</h2>
               <button className="apply-records" onClick={handleModuleClick}>申请记录</button>
             
             </div>

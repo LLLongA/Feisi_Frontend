@@ -29,6 +29,11 @@ const TextToSpeechPage = () => {
     // 显示通知窗口
     // 这里你可以实现一个状态来控制通知窗口的显示
     alert('显示通知窗口'); // 这是一个简单的示例
+  }; 
+
+  const handlehistoryClick = () => {
+    navigate('/history2'); 
+  
   };
 
   return (
@@ -213,7 +218,7 @@ const TextToSpeechPage = () => {
                 立即合成
               </button>
               <button className="small-button">
-                <img src={history} alt="icon2" className="icon" />
+                <img src={history} alt="icon2" className="icon" onClick={handlehistoryClick} />
                 历史记录
               </button>
             </div>

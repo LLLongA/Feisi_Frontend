@@ -16,12 +16,20 @@ const AdminPage = () => {
         navigate('/home');
     };
 
+    const handleHistoryClick = () => {
+        navigate('/history2');
+    };
+
     const handleSettingsClick = () => {
         navigate('/admin');
     };
 
     const handleProfileClick = () => {
         navigate('/profile');
+    };
+
+    const handleUserReviewClick = () => {
+        navigate('/userreview');
     };
 
     const handleNotificationsClick = () => {
@@ -31,6 +39,8 @@ const AdminPage = () => {
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
     };
+
+
 
     return (
         <div className="home-container">
@@ -48,8 +58,8 @@ const AdminPage = () => {
             <div className='container'>
                 <div className='sidebar'>
                     <ul>
-                        <li onClick={handleHomeClick}>用户管理</li>
-                        <li onClick={handleSettingsClick}>账号审核</li>
+                        <li onClick={handleSettingsClick}>用户管理</li>
+                        <li onClick={handleUserReviewClick}>账号审核</li>
                         <li>权限申请审核</li>
                         <li>用量申请审核</li>
                         <li>API Key 管理</li>
@@ -96,7 +106,7 @@ const AdminPage = () => {
                         <div className='usageDetails1'>
                             <div className='title'>
                             <h3>剩余用量</h3>
-                            <button className='button3'>历史使用记录</button>
+                            <button className='button3' onClick={handleHistoryClick}>历史使用记录</button>
                             </div>
 
                             <table>

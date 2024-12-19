@@ -52,9 +52,7 @@ const TextToSpeechPage = () => {
         <h1>文本转语音</h1>
         <div className="text-to-speech">
           <div className="input-area">
-            <p>在此输入文本或将TXT文本文件拖到此处进行识别。</p>
-            <p>单条文字最长K个字符，总长度最长K个字符。</p>
-            <p>请确认TXT文档为UTF-8编码，否则会导致识别失败。</p>
+            <p>在此输入文本或将TXT文本文件拖到此处进行识别。单条文字最长K个字符,总长度最长K个字符。请确认TXT文档为UTF-8编码，否则会导致识别失败。</p>
           </div>
           <div className="voice-options">
             <div className="search">

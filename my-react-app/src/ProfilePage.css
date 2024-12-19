@@ -143,6 +143,12 @@ button {
   align-items: center;
 }
 
+.modules-buttons {
+  display: flex;
+  align-items: center; 
+  height: 60px;
+}
+
 .modules-buttons button {
   margin-right: 10px;
   padding: 10px 20px;
@@ -150,6 +156,11 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.add_module {
+  height: 50px;
+  margin-left: auto;
 }
 
 .apply-records {
@@ -169,10 +180,7 @@ button {
 
 }
 
-.add_module {
-  width: 40px;
-  margin-left: 98%;
-}
+
 
 .usage-table {
   width: 100%;

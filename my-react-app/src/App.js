@@ -15,6 +15,7 @@ import History from './History';
 import ApiKeys from './ApiKeys';
 import AdminPage from './AdminPage';
 import HistoryPage from './HistoryPage';
+import UserReview from './UserReview';
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
           <Route path="/apikeys" element={<ApiKeys />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/history2" element={<HistoryPage />} />
+          <Route path="/userreview" element={<UserReview />} />
+
         </Routes>
       </div>
     </Router>

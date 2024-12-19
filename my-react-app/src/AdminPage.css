@@ -26,8 +26,9 @@ body {
     justify-content: center; /* 垂直居中 */
     align-items: center; /* 水平居中 */
     width: 10%;
-    background-color: #e9ecef;
+    background-color: #DBEBFF;
     padding: 20px;
+    border: none;
     box-sizing: border-box;
     height: calc(100vh - 60px);
 }

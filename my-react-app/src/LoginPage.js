@@ -10,6 +10,7 @@ const LoginPage = () => {
     navigate('/home');
   };
 
+
   return (
     <div className="login-container">
       <div className="login-form">
@@ -20,7 +21,7 @@ const LoginPage = () => {
           <button type="submit">登录</button>
         </form>
         <div className="links">
-          <Link to="/forgot-password" className="forgot-password-link">忘记密码？</Link>
+          <Link to="/forget" className="forgot-password-link">忘记密码？</Link>
           <Link to="/register" className="register-link">注册</Link>
         </div>
       </div>

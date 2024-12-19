@@ -6,11 +6,9 @@ import settings from './public/settings.png';
 import notifications from './public/notifications.png';
 import person from './public/person.png';
 import { useNavigate } from 'react-router-dom';
-import user from './public/person.png';
 
 const UserReview = () => {
     const navigate = useNavigate();
-    const [searchTerm, setSearchTerm] = useState('');
 
     const handleHomeClick = () => {
         navigate('/home');
@@ -50,6 +48,10 @@ const UserReview = () => {
 
     const handleapimanageClick = () => {
         navigate('/apimanage');
+    };
+
+    const handledetailClick = () => {
+        navigate('/userreviewdetail');
     };
 
 
@@ -119,7 +121,7 @@ const UserReview = () => {
                                 <td>产品经理实习生</td>
                                 <td>我是产品经理实习生...</td>
                                 <td>
-                                    <span className="link">详情</span>
+                                    <span className="link" onClick={handledetailClick}>详情</span>
                                     <span className="link pass">通过</span>
                                     <span className="link reject">驳回</span>
                                 </td>
@@ -131,7 +133,7 @@ const UserReview = () => {
                                 <td>产品经理实习生</td>
                                 <td>**********</td>
                                 <td>
-                                    <span className="link">详情</span>
+                                    <span className="link" onClick={handledetailClick}>详情</span>
                                     <span className="link pass">通过</span>
                                     <span className="link reject">驳回</span>
                                 </td>

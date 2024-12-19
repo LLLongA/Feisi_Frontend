@@ -85,18 +85,7 @@ h1 {
 .buttons-container {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
 
-.search-container {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-    margin-left: 700px;
-    margin-right: 20px;
-    font-size: 16px;
 }
 
 .button {
@@ -105,16 +94,18 @@ h1 {
     cursor: pointer;
     margin-right: 10px;
     color: white;
-    font-size: 16px;
+    font-size: 10px;
+    overflow: hidden; /* 隐藏超出部分 */
+
+
 }
 
 .blue {
-    margin-left: 10px;
-
     background-color: #0072ff;
 }
 
 .red {
+
 
 
     background-color: #ff0000;

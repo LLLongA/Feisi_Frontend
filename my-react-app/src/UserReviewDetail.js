@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import './UserReviewHistory.css';
+import './UserReviewDetail.css';
 
 import home from './public/home_icon.png';
 import settings from './public/settings.png';
 import notifications from './public/notifications.png';
 import person from './public/person.png';
 import { useNavigate } from 'react-router-dom';
-import user from './public/person.png';
 import back from './public/undo.png'
 
-const UserReviewHistory = () => {
+const UserReviewDetail = () => {
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -54,6 +53,7 @@ const UserReviewHistory = () => {
     };
 
 
+
     const handleNotificationsClick = () => {
         alert('显示通知窗口');
     };
@@ -89,52 +89,21 @@ const UserReviewHistory = () => {
 
                     <div className='titlecontain'>
 
-                    <h1>账号审核-历史记录</h1>
+                    <h1>账号审核</h1>
                     </div>
 
-                    <div className='rightcontain'>
-                    <div className="buttons-container">
-                        <img className="undo"src={back} onClick={handleUserReviewClick}></img>
-                        <input className="search-container"type="text" placeholder="搜索..." />
+                    <div className='contain1'>
+                        <img src={back} className='undo' onClick={handlebackClick}></img>
+
+                        <div className='a'><div className='f'>姓名</div><div>刘梦涵</div></div>
+                        <div className='b'><div className='f'>部门</div><div>互联网产品部</div></div>
+                        <div className='c'><div className='f'>职位</div><div>产品经理实习生</div></div>
+                        <div className='d'><div className='f'>申请理由</div><div>XXXXXXXXXXXXXXXXXXXX</div></div>
+                        <div className='e'><button className='blue'>通过</button><button className='red'>驳回</button></div>
+
 
                     </div>
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>姓名</th>
-                                <th>部门</th>
-                                <th>职位</th>
-                                <th>申请理由</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>刘梦涵</td>
-                                <td>互联网产品部</td>
-                                <td>产品经理实习生</td>
-                                <td>我是产品经理实习生...</td>
-                                <td>
-                                    <span className="link">详情</span>
-                                    <span className="link pass">通过</span>
-                                    <span className="link reject">驳回</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>新用户</td>
-                                <td>111111</td>
-                                <td>产品经理实习生</td>
-                                <td>**********</td>
-                                <td>
-                                    <span className="link">详情</span>
-                                    <span className="link pass">通过</span>
-                                    <span className="link reject">驳回</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
                 </div>
 
 
@@ -149,4 +118,4 @@ const UserReviewHistory = () => {
     );
 };
 
-export default UserReviewHistory;
+export default UserReviewDetail;

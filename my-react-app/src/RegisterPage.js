@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './RegisterPage.css';
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div className="login-container">
       <div className="login-form">
@@ -32,4 +32,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

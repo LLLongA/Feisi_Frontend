@@ -19,11 +19,6 @@ body {
     flex-direction: row;
     height: 100vh;
 }
-
-.undo{
-    height: 50px;
-}
-
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -59,6 +54,16 @@ body {
     /* 确保文本居中 */
 }
 
+.contain1{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+    
+}
+
 .rightcontain {
     margin-left: 20px;
     margin-right: 20px;
@@ -86,25 +91,27 @@ h1 {
     color: #0072ff;
 }
 
-.buttons-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.undo{
     margin-top: 20px;
     margin-left: 20px;
 }
 
-.search-container {
+.a,.b,.c,.d,.e{
+    display: flex;
+    margin: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-    margin-left: 700px;
-    margin-right: 20px;
-    font-size: 16px;
+    margin-left: 50px;
 }
 
-.button {
+.e {
+    justify-content: center;
+}
+
+.f {
+    margin-right: 50px;
+}
+
+button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -113,54 +120,3 @@ h1 {
     font-size: 16px;
 }
 
-.blue {
-    margin-left: 10px;
-
-    background-color: #0072ff;
-}
-
-.red {
-
-
-    background-color: #ff0000;
-}
-
-.grey {
-    background-color: #d3d3d3;
-    color: black;
-    margin-left: auto;
-    height: 40px;
-}
-
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: center;
-
-    border-bottom: 1px solid #ddd;
-}
-
-thead {
-    background-color: #f0f8ff;
-}
-
-.link {
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.pass {
-    color: #0072ff;
-}
-
-.reject {
-    color: #ff0000;
-}

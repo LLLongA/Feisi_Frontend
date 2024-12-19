@@ -21,6 +21,9 @@ import ApiManage from './ApiManage';
 import UsageApplyReview from './UsageApplyReview';
 import UserApplyReview from './UserApplyReview';
 import UserReviewHistory from './UserReviewHistory';
+import ForgetPasswordPage from './ForgotPasswordPage';
+import UserReviewDetail from './UserReviewDetail';
+
 
 function App() {
   return (
@@ -48,6 +51,10 @@ function App() {
           <Route path="/usageapplyreview" element={<UsageApplyReview />} />
           <Route path="/userapplyreview" element={<UserApplyReview />} />
           <Route path="/userreviewhistory" element={<UserReviewHistory />} />
+          <Route path="/forget" element={<ForgetPasswordPage />} />
+          <Route path="/userreviewdetail" element={<UserReviewDetail />} />
+
+
 
 
 

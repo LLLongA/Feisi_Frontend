@@ -50,14 +50,12 @@ body {
     text-align: center; /* 确保文本居中 */
 }
 
-.maincontainer {
-    width: 90%;
-    background-color: #fff;
-    box-sizing: border-box;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+.main {
     display: flex;
     flex-direction: row;
+    width: 90%;
+    height: calc(100vh - 60px);
+    background-color: white;
 }
 
 .leftside {
@@ -88,6 +86,8 @@ body {
 
 .userList1 {
     margin-top: 10px;
+    height: calc(100vh - 150px); /* Adjust this value to fit your layout */
+    overflow-y: auto;
 }
 
 .userItem1 {
